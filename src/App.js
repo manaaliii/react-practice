@@ -3,32 +3,32 @@ import CallBackDemo from './components/CallBackDemo.js'
 
 
 
-const App = () => {
-  return(
-    <div>
-      <CallBackDemo />
-    </div>
-  )
-}
-
-export default App;
-
-
-// import ArrayState from './components/ArrayState.js';
-// import ObjectState from './components/ObjectState.js';
-// import MemoDemo from './components/MemoDemo.js';
-
 // const App = () => {
 //   return(
 //     <div>
-//       <ArrayState />
-//       <ObjectState />
-//       <MemoDemo />
+//       <CallBackDemo />
 //     </div>
 //   )
 // }
 
 // export default App;
+
+
+import ArrayState from './components/ArrayState.js';
+import ObjectState from './components/ObjectState.js';
+import MemoDemo from './components/MemoDemo.js';
+
+const App = () => {
+  return(
+    <div>
+      <ArrayState />
+      <ObjectState />
+      <MemoDemo />
+    </div>
+  )
+}
+
+export default App;
 
 
 

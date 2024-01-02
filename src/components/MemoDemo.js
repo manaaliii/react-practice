@@ -24,4 +24,15 @@ const MemoDemo = props => {
     )
 }
 
+
+// another use case
+
+// when you have a function which is slow, so you can use useMemo to memoize the function and use it in the component
+
+//   const doubleNumber = useMemo(()=>{
+//     return slowFunction(number)
+//   }, [number])
+
+
+
 export default MemoDemo;
