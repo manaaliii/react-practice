@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import Message from './components/Message.js';
+import Eval from './components/Condition.js';
+import {Eval2} from './components/Condition.js';
+import ListRender from './components/ListRender.js';
+import WindowSize from './components/WindowSize.js';
+import Button from './components/Button.js';
+import CustomButton from './components/CustomButton.js';
+import React,{useState, useEffect} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+  const [toggle, setToggle] = useState(true);
+  let [btnStyle, setBtnStyle] = useState({color: 'black', backgroundColor: 'white'});
+  // let btnStyle = {color: 'black', backgroundColor: 'white'}
+
+  const handleClick = (event) => {
+
+    setToggle(prevToggle => prevToggle ? false : true);
+    setBtnStyle(prevBtnStyle => {
+      return (
+      btnStyle =    toggle ? {color: 'white', backgroundColor: 'black'} : {color: 'black', backgroundColor: 'white'}
+      )
+    })
+    console.log(toggle)
+    console.log(btnStyle)
+    event.stopPropagation();
+  }
+  return(
+      <div onClick={()=>console.log('i m div')}>
+        <div onClick={(event)=>{console.log('i m div but direct parent')}}>
+
+          <Button btnstyle={btnStyle} onclick={handleClick} btn_name="Click" />
+        </div>
+        <CustomButton />
+        <WindowSize />
+        <Eval eval={true}>
+          <ListRender list={[1, 5, 8]}/>
+        </Eval>
+      </div>
+  )
 }
-
-export default App;
