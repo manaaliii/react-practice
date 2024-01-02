@@ -1,12 +1,14 @@
 import React from 'react';
 import ArrayState from './components/ArrayState.js';
 import ObjectState from './components/ObjectState.js';
+import MemoDemo from './components/MemoDemo.js';
 
 const App = () => {
   return(
     <div>
       <ArrayState />
       <ObjectState />
+      <MemoDemo />
     </div>
   )
 }
