@@ -6,6 +6,7 @@ import WindowSize from './components/WindowSize.js';
 import Button from './components/Button.js';
 import CustomButton from './components/CustomButton.js';
 import React,{useState, useEffect} from 'react';
+import State_ from './components/demoSnapshot.js';
 
 export default function App() {
   const [toggle, setToggle] = useState(true);
@@ -26,15 +27,16 @@ export default function App() {
   }
   return(
       <div onClick={()=>console.log('i m div')}>
-        <div onClick={(event)=>{console.log('i m div but direct parent')}}>
+        {/* <div onClick={(event)=>{console.log('i m div but direct parent')}}>
 
           <Button btnstyle={btnStyle} onclick={handleClick} btn_name="Click" />
-        </div>
+        </div> */}
         <CustomButton />
         <WindowSize />
         <Eval eval={true}>
           <ListRender list={[1, 5, 8]}/>
         </Eval>
+        <State_ />
       </div>
   )
 }
