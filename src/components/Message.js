@@ -5,7 +5,6 @@ const Message = (props) => {
         <>
             <h1> I am the component Message</h1>
             <p>Message: {props.msg}</p>
-
         </>
     );
 }
