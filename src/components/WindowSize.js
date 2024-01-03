@@ -15,7 +15,7 @@ const WindowSize = (props) => {
             // window.removeEventListener('resize', handleChangeSize);
             // console.log('returns  moye moye')
         // }
-    // }, [])
+    // },[])
     return(
         <h1 onChange={handleChangeSize}>{windowSize}</h1>
     )

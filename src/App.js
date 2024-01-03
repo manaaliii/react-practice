@@ -1,18 +1,28 @@
 import React from 'react';
-// import CallBackDemo from './components/CallBackDemo.js'
-import DeleteArray from './components/DeleteArray.js'
-
+import ReducerDemo from './components/ReducerDemo';
 
 const App = () => {
   return(
     <div>
-      {/* <CallBackDemo /> */}
-      <DeleteArray />
+      <ReducerDemo />
     </div>
   )
 }
 
 export default App;
+
+// import CallBackDemo from './components/CallBackDemo.js'
+// import DeleteArray from './components/DeleteArray.js'
+// const App = () => {
+//   return (
+//     <div>
+//       <CallBackDemo />
+//       <DeleteArray />
+//     </div>
+//   )
+// }
+
+// export default App;
 
 
 // import ArrayState from './components/ArrayState.js';
@@ -46,7 +56,7 @@ export default App;
 // export default function App() {
 //   const [toggle, setToggle] = useState(true);
 //   let [btnStyle, setBtnStyle] = useState({color: 'black', backgroundColor: 'white'});
-  // let btnStyle = {color: 'black', backgroundColor: 'white'}
+// let btnStyle = {color: 'black', backgroundColor: 'white'}
 
 //   const handleClick = (event) => {
 //     setToggle(prevToggle => prevToggle ? false : true);

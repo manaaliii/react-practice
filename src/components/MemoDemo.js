@@ -1,6 +1,6 @@
 import React,{useState, useEffect, useMemo} from "react";
 
-const MemoDemo = props => {
+const MemoDemo = () => {
     const [number, setNumber] = useState(5);
     const [color, setColor] = useState('light');
 

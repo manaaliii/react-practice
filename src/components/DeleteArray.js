@@ -10,6 +10,7 @@ const DeleteArray = (props) =>{
         console.log(ar);
     
     }
+
     const handleClickHead=(e)=>{
         e.preventDefault();
         setAr([{id: id++, name: name}, ...ar])

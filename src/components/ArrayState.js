@@ -28,11 +28,11 @@ const ArrayState = (props) => {
         <input type="text" value={val} onChange={e => setVal(e.target.value)} />
         <button onClick={() => handleClick()}>Add</button>
 
-    {itms.map(i => (
-        <div key={i.id}>
-            <h5>{i.val}</h5>
-            <button onClick={() => handleRemove(i.id)}>Remove</button>
-            <button onClick={(()=> handleUpdate(i.id))}>Increment</button>
+    {itms?.map(i => (
+        <div key={i?.id}>
+            <h5>{i?.val}</h5>
+            <button onClick={() => handleRemove(i?.id)}>Remove</button>
+            <button onClick={(()=> handleUpdate(i?.id))}>Increment</button>
         </div>
     )
     )}
