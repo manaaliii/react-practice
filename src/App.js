@@ -1,34 +1,35 @@
 import React from 'react';
-import CallBackDemo from './components/CallBackDemo.js'
+// import CallBackDemo from './components/CallBackDemo.js'
+import DeleteArray from './components/DeleteArray.js'
 
-
-
-// const App = () => {
-//   return(
-//     <div>
-//       <CallBackDemo />
-//     </div>
-//   )
-// }
-
-// export default App;
-
-
-import ArrayState from './components/ArrayState.js';
-import ObjectState from './components/ObjectState.js';
-import MemoDemo from './components/MemoDemo.js';
 
 const App = () => {
   return(
     <div>
-      <ArrayState />
-      <ObjectState />
-      <MemoDemo />
+      {/* <CallBackDemo /> */}
+      <DeleteArray />
     </div>
   )
 }
 
 export default App;
+
+
+// import ArrayState from './components/ArrayState.js';
+// import ObjectState from './components/ObjectState.js';
+// import MemoDemo from './components/MemoDemo.js';
+
+// const App = () => {
+//   return(
+//     <div>
+//       <ArrayState />
+//       <ObjectState />
+//       <MemoDemo />
+//     </div>
+//   )
+// }
+
+// export default App;
 
 
 
