@@ -1,15 +1,50 @@
-import React from 'react';
-import ReducerDemo from './components/ReducerDemo';
+import React, {useReducer} from 'react';
+import CharatcterList from './components/CharatcterList';
+import CharacterReducer from './reducers/CharacterReducer';
+import { CharacterContext, CharacterDispatchContext } from './context/contextCharacters';
 
 const App = () => {
+  const initialCharacters = ['Saitama','Itachi', 'Garou', 'Hina', 'Emma', 'Mikey'];
+  const [characters, dispatch] = useReducer(CharacterReducer, initialCharacters);
   return(
-    <div>
-      <ReducerDemo />
-    </div>
+    <>
+     <CharacterContext.Provider value={characters}>
+      <CharacterDispatchContext.Provider value={dispatch}>
+        <CharatcterList />
+      </CharacterDispatchContext.Provider>
+      </ CharacterContext.Provider>
+
+    </>
   )
 }
-
 export default App;
+
+// import CharacterProvider from './context/contextCharacters';
+// const App = () => {
+//   return(
+//     <>
+//      <CharacterProvider>
+     
+//      <CharatcterList />
+          
+//      </CharacterProvider>
+//     </>
+//   )
+// }
+
+// export default App;
+
+
+// import ReducerDemo from './components/ReducerDemo';
+// const App = () => {
+//   return(
+//     <div>
+//       <ReducerDemo />
+//     </div>
+//   )
+// }
+
+// export default App;
 
 // import CallBackDemo from './components/CallBackDemo.js'
 // import DeleteArray from './components/DeleteArray.js'
