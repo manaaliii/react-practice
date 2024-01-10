@@ -1,5 +1,5 @@
 import React, {useReducer} from 'react';
-import CharatcterList from './components/CharatcterList';
+import CharacterList from './components/CharacterList';
 import CharacterReducer from './reducers/CharacterReducer';
 import { CharacterContext, CharacterDispatchContext } from './context/contextCharacters';
 
@@ -10,7 +10,7 @@ const App = () => {
     <>
      <CharacterContext.Provider value={characters}>
       <CharacterDispatchContext.Provider value={dispatch}>
-        <CharatcterList />
+        <CharacterList />
       </CharacterDispatchContext.Provider>
       </ CharacterContext.Provider>
 
@@ -25,7 +25,7 @@ export default App;
 //     <>
 //      <CharacterProvider>
      
-//      <CharatcterList />
+//      <CharacterList />
           
 //      </CharacterProvider>
 //     </>
@@ -108,7 +108,7 @@ export default App;
 //       <div onClick={()=>console.log('i m div')}>
 //         <div onClick={(event)=>{console.log('i m div but direct parent')}}>
 
-//           <Button btnstyle={btnStyle} onclick={handleClick} btn_name="Click" />
+//           <Button style={btnStyle} onclick={handleClick} btn_name="Click" />
 //         </div>
 //         <CustomButton />
 //         <WindowSize />
