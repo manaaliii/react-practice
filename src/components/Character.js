@@ -7,6 +7,7 @@ const Character = ({id, character}) =>{
     const characters = useContext(CharacterContext);
     const [input, setInput] = useState(character);
     useEffect(()=>{
+        console.log(character, 'usseEffect');
         setInput(character)
     }, [characters])
     

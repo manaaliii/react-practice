@@ -1,7 +1,7 @@
 import React, { createContext} from 'react';   
 
 export const CharacterContext = createContext([]);
-export const CharacterDispatchContext =  createContext(()=>{});
+export const CharacterDispatchContext =  createContext(p=>{});
 
 
 
